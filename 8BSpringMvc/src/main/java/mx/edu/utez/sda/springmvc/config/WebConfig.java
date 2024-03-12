@@ -12,8 +12,6 @@ import java.util.ArrayList;
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
-    String UNA_constante = "UNA CONSTAnte mal declarada";
-
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
@@ -24,10 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/pokemon").setViewName("pokemon");
-
-        String x= "No buena practica";
-        while (x == null){
-            System.out.println("algo");
-        }
+        registry.addViewController("/login").setViewName("login");
     }
 }
